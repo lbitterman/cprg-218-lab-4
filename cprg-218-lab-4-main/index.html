@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/styles/reset.css">
+  <link rel="stylesheet" type="text/css" href="/styles/fonts.css">
+  <link rel="stylesheet" type="text/css" href="/styles/global.css">
+  <link rel="stylesheet" type="text/css" href="styles/lab_four_starter.css">
+  <title>Common Website Features</title>
+</head>
+<body>
+  <section class="hero-container">
+    <div class="hero-image">
+      <img src="Assets/luis-lara.jpg" alt="black-and-white-seahorse">
+      <div class="hero-text">
+      </div>
+    </div>
+    <div class="remove-assignment-content">
+      <h1>Foundation for Seahorse Rehoming</h1>
+      <p>Finding Loving Seahorse Homes for Lost Seahorses</p>
+      <button class="fish-button">
+        <img src="Assets/fish.svg" alt="Fish Icon">
+        Find your Fishy
+    </button>
+    </div>
+  </section>
+  <section class="container content-container">
+    <!-- Remove and add content HTML -->
+    <div class="remove-assignment-content">
+      <div class="content-container">
+        <div class="text-column">
+          <h1>Is your home right for a seahorse?</h1>
+          <p> Seahorses are extremely snuggly creatures who require an attentive
+            caretaker. They can be quite energetic. Make sure you have time to
+            walk your seahorse daily before committing to adopt one into your 
+            family.
+          </p>
+          <button class="fish-button">
+            <img src="Assets/fish.svg" alt="Fish Icon">
+            Find your Fishy
+        </button>
+        </div>
+        <div class="image-column">
+            <img src="Assets/photo.avif" alt="vibrant seahorse">
+        </div>
+    </div>
+    </div>
+  </section>
+  <section class="container accordion-container">
+    <!-- Remove and add accordion HTML -->
+    <div class="remove-assignment-content">
+      <h2>Seahorse Facts</h2>
+      <p>Click to Check your Answers!</p>
+      
+      <button class="accordion">Are Seahorses Considered Fish?</button>
+      <div class="panel">
+        <p>Yes!</p>
+      </div>
+      
+      <button class="accordion">Are Seahorse Couples Romantic?</button>
+      <div class="panel">
+        <p>Yes! Every morning, they preform a synchronized dance to strengthen their bond.</p>
+      </div>
+      
+      <button class="accordion">Are Seahorses Good Swimmers?</button>
+      <div class="panel">
+        <p>Nope! They swim very slowly but can move forward, backwards, up, and down, which is quite unique. </p>
+      </div>
+      <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+              panel.style.display = "none";
+            } else {
+              panel.style.display = "block";
+            }
+          });
+        }
+        </script>
+    </div>
+  </section>
+  <section class="footer-container">
+    <!-- Remove and add footer HTML -->
+    <div class="remove-assignment-content">
+      <div class="google-map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d321200.
+      71222004754!2d-114.41747091414547!3d51.0275915598453!2m3!1f0!2f0!3f0!3m2!1
+      i1024!2i768!4f13.1!3m3!1m2!1s0x537170039f843fd5%3A0x266d3bb1b652b63a!2sCal
+      gary%2C%20AB!5e0!3m2!1sen!2sca!4v1709785121513!5m2!1sen!2sca" width="600" 
+      height="450" style="border:0;" allowfullscreen="" loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+      <div>&copy; Seahorse Rehoming Foundation <span id="copyright-year"></span></div>
+      <script>
+        window.addEventListener('load', function() {
+            var date = new Date();
+            var year = date.getFullYear();
+            document.getElementById('copyright-year').textContent = year;
+        });
+        </script>
+    </div>
+  </section>
+</body>
+</html>
